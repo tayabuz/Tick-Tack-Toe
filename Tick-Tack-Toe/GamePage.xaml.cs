@@ -171,14 +171,17 @@ namespace Tick_Tack_Toe
             if ((game.GameIsWin) && (game.SequencingStroke() == Game.CellStateCondition.Cross))
             {
                ShowWin.Text = "Победили крестики";
+               ShowQueueStroke.Text = "";
             }
             if ((game.GameIsWin) && (game.SequencingStroke() == Game.CellStateCondition.Zero))
             {
                 ShowWin.Text = "Победили нолики";
+                ShowQueueStroke.Text = "";
             }
             if ((game.CheckFieldHaveEmptyCells() == false))
             {
                 ShowWin.Text = "Ничья";
+                ShowQueueStroke.Text = "";
             }
         }
 
