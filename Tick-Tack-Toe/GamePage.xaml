@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="Tick_Tack_Toe.GamePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Tick_Tack_Toe"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="1" x:Name="ShowQueueStroke" MinHeight="30" Height="Auto" Width="Auto" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" x:Name="FirstPlayerName" MinHeight="30" Height="Auto" Width="Auto" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="1" Grid.Column="2" x:Name="SecondPlayerName" MinHeight="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" x:Name="ShowWin" MinHeight="30" Height="Auto" Width="Auto" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button Grid.Row="4" Grid.Column="1" x:Name="NewGame_Button" Content="Начать новую игру" Height="Auto" Width="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Click="NewGame_Button_OnClick"/>
+        <Grid x:Name="GameField_Grid" Grid.Row="2" Grid.Column="1"/>
+        <Border x:Name="ForFirstPlayerAvatar" Grid.Row ="0" Grid.Column="0" Tapped="FirstPlayerAvatar_OnTapped" BorderBrush="Gray" BorderThickness="4">
+            <Image x:Name="FirstPlayerAvatar" Source="Assets/StoreLogo.png" MaxHeight="200" MaxWidth="200"/>
+        </Border>
+        <Border x:Name="ForSecondPlayerAvatar" Grid.Row ="0" Grid.Column="3" Tapped="SecondPlayerAvatar_OnTapped" BorderBrush="Gray" BorderThickness="4">
+            <Image x:Name="SecondPlayerAvatar" Source="Assets/StoreLogo.png" MaxHeight="200" MaxWidth="200"/>
+        </Border>
+    </Grid>
+</Page>

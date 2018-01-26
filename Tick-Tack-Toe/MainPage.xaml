@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="Tick_Tack_Toe.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Tick_Tack_Toe"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto">
+            <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="Auto" Height="Auto">
+                <TextBox x:Name="SetFirstName"  RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" Width="Auto" Height="Auto"/>
+                <TextBlock Text="Введите имя 1-ого игрока" IsTextSelectionEnabled="True" RelativePanel.LeftOf="SetFirstName" RelativePanel.AlignVerticalCenterWith="SetFirstName"/>
+            </RelativePanel>
+            <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="Auto" Height="Auto">
+                <TextBox x:Name="SetSecondName" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" Width="Auto" Height="Auto"/>
+                <TextBlock Text="Введите имя 2-ого игрока" IsTextSelectionEnabled="True" RelativePanel.LeftOf="SetSecondName" RelativePanel.AlignVerticalCenterWith="SetSecondName"/>
+            </RelativePanel>
+            <Button x:Name="SetPlayersName" Content="Начать игру" Click="SetPlayersName_OnClick" HorizontalAlignment="Center"></Button>
+        </StackPanel>
+    </Grid>
+</Page>
