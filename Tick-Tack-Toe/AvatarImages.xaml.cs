@@ -58,10 +58,7 @@ namespace Tick_Tack_Toe
 
         }
 
-        private void SetImage_OnClick(object sender, RoutedEventArgs e)//передавать в качестве параметра класс Player, в PlayerImage класть Uri картинки, на которую нажали
-        //чтобы вернуть обратно корректно, нужно будет сравнивать возвращаемого Player и нужного Player в GamePage по именам
-        //в GamePage придется написать еще 1 функцию - которая будет сравнивать возвращаемого Player и нужного Player в GamePage по именам и задавать нужному Player Uri
-        //один из вариантов: 1 из игроков - null, а второй- все нужное 
+        private void SetImage_OnClick(object sender, RoutedEventArgs e)
         {
             player.PlayerImage = NewAvatarUri;
             payload1.playerCross = player;
